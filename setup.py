@@ -2,7 +2,7 @@ import sys
 
 from setuptools import setup, find_packages
 
-MIN_PYTHON_VERSION = (3, 7)
+MIN_PYTHON_VERSION = (3, 6)
 
 if sys.version_info[:2] != MIN_PYTHON_VERSION:
     raise RuntimeError("Python version required = {}.{}".format(MIN_PYTHON_VERSION[0], MIN_PYTHON_VERSION[1]))
@@ -28,6 +28,7 @@ Intended Audience :: Science/Research
 License :: OSI Approved :: MIT License
 Programming Language :: Python
 Programming Language :: Python :: 3
+Programming Language :: Python :: 3.6
 Programming Language :: Python :: 3.7
 Programming Language :: Python :: 3.8
 Programming Language :: Python :: 3 :: Only
@@ -62,7 +63,7 @@ with open('README.md', 'r') as fh:
         keywords = ['oidv6', 'Open Images Dataset'],
         include_package_data = True,
         classifiers = [_f for _f in CLASSIFIERS.split('\n') if _f],
-        python_requires = '>=3.7',
+        python_requires = '>=3.6',
         entry_points = {
             'console_scripts': [
                 'oidv6 = oidv6.samples.run:main',
